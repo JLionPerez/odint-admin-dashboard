@@ -24,7 +24,12 @@ li,
 .main_titles,
 .projects,
 .card,
-.icons {
+.icons,
+.announcements,
+.ann_wrapper,
+.ann_card,
+.line,
+.trending {
     display: grid;
 }
 
@@ -41,6 +46,7 @@ li,
     padding: 20px 40px;
     grid-template-rows: 1fr 2fr;
     gap: 20px;
+    box-shadow: 0 5px 5px lightgray;
 }
 
 .top_bar {
@@ -148,12 +154,13 @@ li {
 
 .main-content {
     grid-template-columns: 2fr 1fr;
+    padding: 20px;
+    gap: 30px;
 }
 
 .projects {
     grid-template-rows: 20px 1fr;
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
     gap: 30px;
 }
 
@@ -170,6 +177,7 @@ li {
     padding: 30px;
     grid-template-rows: 30px 1fr 30px;
     grid-template-columns: 2fr 1fr;
+    box-shadow: 2px 4px 5px lightgray;
 }
 
 .card h3,
@@ -180,4 +188,42 @@ li {
 .icons {
     grid-column: 2 / 3;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.side_wrapper {
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.announcements {
+    grid-template-rows: 40px 1fr;
+    gap: 30px;
+}
+
+.ann_wrapper {
+    grid-template-rows: 1fr 1px 1fr 1px 1fr;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 4px 5px lightgray;
+    padding: 30px;
+    gap: 30px;
+}
+
+.line {
+    border: 1px solid lightgray;
+}
+
+.ann_card {
+    grid-template-rows: 20px 1fr;
+}
+
+.announcements > .main_titles,
+.trending > .main_titles {
+    padding-top: 20px;
+    line-height: 60px;
+}
+
+.trending {
+    /* box-shadow: 2px 4px 5px lightgray;
+    background-color: white;
+    border-radius: 15px; */
 }
